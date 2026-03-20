@@ -1053,25 +1053,28 @@ main.search h2.noCategory {
 
 search {
 	float: right;
-	margin-top: -5.1rem;
+	margin-top: -6rem;
 	margin-right: 2rem;
 	max-width: 40rem;
 	min-width: 30rem;
 }
 
+search div, search table, #search td {
+	background-color: transparent !important;
+}
+
+search input {
+	border: 1px solid rgb(0,0,0) !important;
+}
+
 search table,
 #search-results table,
 search td,
-#search-results td {
+#search-results td,
+search div.gsc-input-box {
 	border: none;
 }
 
-search table,
-#search td {
-	background-color: rgb(255,255,255);
-}
-
-search div,
 #search-results div {
 	background-color: rgb(251,252,253);
 }
