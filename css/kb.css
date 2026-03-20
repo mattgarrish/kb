@@ -1065,6 +1065,7 @@ search div, search table, #search td {
 
 search input {
 	border: 1px solid rgb(0,0,0) !important;
+	padding-left: 0.66rem !important;
 }
 
 search table,
