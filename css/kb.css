@@ -1113,6 +1113,9 @@ p.backtotop {
 	div#categories {
 		top: 11.2rem;
 	}
+	aside#sponsor.kb {
+		padding-left: 1rem;
+	}
 }
 
 @media screen and (max-width: 800px) {
