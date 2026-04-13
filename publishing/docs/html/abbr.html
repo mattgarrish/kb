@@ -2,8 +2,9 @@
 title: Abbreviations
 language: en
 description: Guidelines for the use of abbreviations.
-category: HTML
+category: html
 canonical: https://kb.daisy.org/publishing/docs/html/abbr.html
+appliesTo: ['Audiobooks*','EPUB3','EPUB2']
 layout: pages/topic
 ---
 
@@ -40,30 +41,27 @@ layout: pages/topic
 	
 	<figure id="ex-02">
 		<figcaption><span class="label">Example 2 &#8212; Including the expansion using an <code>abbr</code> element</span></figcaption>
-		<pre id="ex-02-src" class="prettyprint linenums"><code>&lt;p>
-&lt;abbr
-title="The United States Mexico Canada Agreement"
->USMCA&lt;/abbr>
-replaced &lt;abbr
-title="The North American Free Trade Agreement"
->NAFTA&lt;/abbr> in 2019 &#8230; &lt;/p></code></pre>
+		<pre id="ex-02-src" class="prettyprint linenums"><code>&lt;p>The
+   &lt;abbr title="United States Mexico Canada Agreement"
+   >USMCA&lt;/abbr> replaced the &lt;abbr
+   title="North American Free Trade Agreement"
+   >NAFTA&lt;/abbr> in 2019 &#8230; &lt;/p></code></pre>
 	</figure>
 	
 	<figure id="ex-03">
 		<figcaption><span class="label">Example 3 &#8212; Using the <code>abbr</code> element to differentiate similar words</span></figcaption>
 		<pre id="ex-03-src" class="prettyprint linenums"><code>&lt;p>If you follow
-&lt;abbr title="Saint">St.&lt;/abbr>
-Stephen
-&lt;abbr title="Street">St.&lt;/abbr>
-north for ten blocks &#8230; &lt;/p></code></pre>
+   &lt;abbr title="Saint">St.&lt;/abbr Stephen
+   &lt;abbr title="Street">St.&lt;/abbr>
+   north for ten blocks &#8230; &lt;/p></code></pre>
 	</figure>
 	
 	<figure id="ex-04">
 		<figcaption><span class="label">Example 4 &#8212; Linking to a glossary entry</span></figcaption>
 		<pre id="ex-04-src" class="prettyprint linenums"><code>&lt;p>Some &lt;a
-href="glossary.html#snafu"
-role="doc-glossref">SNAFUs&lt;/a>
-are not good to expand on PG sites&#8230; &lt;/p></code></pre>
+     href="glossary.html#snafu"
+     role="doc-glossref">SNAFUs&lt;/a>
+   are not good to expand on PG sites&#8230; &lt;/p></code></pre>
 	</figure>
 </section>
 
