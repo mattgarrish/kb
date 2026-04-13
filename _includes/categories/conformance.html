@@ -1,0 +1,28 @@
+{% if page.language == "en" %}
+	{% assign path = "/publishing/docs/conformance/" %}
+{% else %}
+	{% assign path = "/publishing/" + page.language + "/conformance/"  %}
+{% endif %}
+
+<ol role="list">
+	<li id="conf-epub">
+		<a href="{{ path }}epub.html">{{ site.data[page.language].topics.conformance.topics.conf-epub.title }}</a>
+		<br>
+		<span class="topic_subtitle">{{ site.data[page.language].topics.conformance.topics.conf-epub.subtitle }}</span>
+	</li>
+	<li id="conf-s508">
+		<a href="{{ path }}s508.html">{{ site.data[page.language].topics.conformance.topics.conf-s508.title }}</a>
+		<br>
+		<span class="topic_subtitle">{{ site.data[page.language].topics.conformance.topics.conf-s508.subtitle }}</span>
+	</li>
+	<li id="conf-wcag">
+		<a href="{{ path }}wcag.html">{{ site.data[page.language].topics.conformance.topics.conf-wcag.title }}</a>
+		<br>
+		<span class="topic_subtitle">{{ site.data[page.language].topics.conformance.topics.conf-wcag.subtitle }}</span>
+	</li>
+	<li id="conf-wcag-expl">
+		<a href="wcag/">{{ site.data[page.language].topics.conformance.topics.conf-wcag-expl.title }}</a>
+		<br>
+		<span class="topic_subtitle">{{ site.data[page.language].topics.conformance.topics.conf-wcag-expl.subtitle }}</span>
+	</li>
+</ol>

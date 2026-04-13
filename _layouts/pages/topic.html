@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div id="col-wrapper">
+	{%include page_toc.html%}
+	
+	<div id="body">
+		{% unless page.allTopics %}
+		
+		<div id="page-title">
+			{% unless page.hideCategory %}
+				<div class="category">{{ site.data[page.language].ui.category.cat }}： <a href="index.html" class="breadcrumb">HTML</a></div>
+			{% endunless %}
+			<h2>{{page.title}}</h2>
+		</div>
+		{% endunless %}
+		
+		{{content}}
+	</div>
+	
+	{%include categories.html%}
+</div>

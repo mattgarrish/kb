@@ -1,0 +1,45 @@
+{% if page.allTopics %}
+	{% assign hd = "h4" %}
+{% else %}
+	{% assign hd = "h3" %}
+{% endif %}
+
+{% if page.language == "en" %}
+	{% assign path = "/publishing/docs/sync-media/" %}
+{% else %}
+	{% assign path = "/publishing/" + page.language + "/sync-media/"  %}
+{% endif %}
+
+<section id="sync-implementation">
+	<{{ hd }}>{{ site.data[page.language].topics.sync-media.categories.sync-implementation.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="sync-overview">
+			<a href="{{ path }}overlays.html">{{ site.data[page.language].topics.sync-media.categories.sync-implementation.topics.sync-overview.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.sync-media.categories.sync-implementation.topics.sync-overview.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+
+<section id="sync-techniques">
+	<{{ hd }}>{{ site.data[page.language].topics.sync-media.categories.sync-techniques.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="sync-highlight">
+			<a href="{{ path }}highlight.html">{{ site.data[page.language].topics.sync-media.categories.sync-techniques.topics.sync-highlight.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.sync-media.categories.sync-techniques.topics.sync-highlight.subtitle }}</span>
+		</li>
+		<li id="sync-lists">
+			<a href="{{ path }}lists.html" aria-label="Synchronized Media Lists">{{ site.data[page.language].topics.sync-media.categories.sync-techniques.topics.sync-lists.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.sync-media.categories.sync-techniques.topics.sync-lists.subtitle }}</span>
+		</li>
+		<li id="sync-tables">
+			<a href="{{ path }}tables.html" aria-label="Synchronized Media Tables">{{ site.data[page.language].topics.sync-media.categories.sync-techniques.topics.sync-tables.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.sync-media.categories.sync-techniques.topics.sync-tables.subtitle }}</span>
+		</li>
+	</ol>
+</section>

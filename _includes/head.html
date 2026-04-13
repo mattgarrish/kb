@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<title>{{ page.title }} - {{ site.data[page.language].ui.footer.topics }}</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ page.description }}">
+
+<link rel="canonical" href="{{ page.canonical }}">
+
+<script async="" src="//cse.google.com/adsense/search/async-ads.js"></script>
+<script src="https://smart.daisy.org/js/sponsor.js"></script>
+
+<link rel="stylesheet" href="/css/kb.css">
+<link rel="stylesheet" href="/css/sponsor.css">
+<link rel="stylesheet" href="/css/prettify.css">
+
+{% if page.index %}
+<link rel="stylesheet" href="/css/primary-nav.css">
+{% endif %}
+
+{% if page.allTopics %}
+<link rel="stylesheet" href="/css/topics.css">
+{% endif %}
+	
+	
+{% if page.details %}
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="/js/details.js" defer="defer"></script>
+{% endif %}
+
+<script src="/js/prettify.js"></script>
+
+<script src="https://www.googletagmanager.com/gtag/js?id=G-FKBYKZH39R" async="async"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-FKBYKZH39R');
+</script>
+
+<link rel="icon" type="image/x-icon" href="https://kb.daisy.org/favicon.ico" sizes="any">

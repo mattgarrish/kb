@@ -1,0 +1,340 @@
+{% if page.allTopics %}
+	{% assign hd = "h4" %}
+{% else %}
+	{% assign hd = "h3" %}
+{% endif %}
+
+{% if page.language == "en" %}
+	{% assign path = "/publishing/docs/html/" %}
+{% else %}
+	{% assign path = "/publishing/" + page.language + "/html/"  %}
+{% endif %}
+
+<section id="html-elem-attr">
+	<{{ hd }}>{{ site.data[page.language].topics.html.categories.html-elem-attr.title }}</{{ hd }}>
+	<ol role="list">
+		<li id="html-abbr">
+			<a href="{{ path }}abbr.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-abbr.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-abbr.subtitle }}</span>
+		</li>
+		<li id="html-accesskeys">
+			<a href="html/accesskeys.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-accesskeys.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-accesskeys.subtitle }}</span>
+		</li>
+		<li id="html-articles">
+			<a href="{{ path }}articles.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-articles.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-articles.subtitle }}</span>
+		</li>
+		<li id="html-asides">
+			<a href="{{ path }}asides.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-asides.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-asides.subtitle }}</span>
+		</li>
+		<li id="html-audio">
+			<a href="{{ path }}audio.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-audio.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-audio.subtitle }}</span>
+		</li>
+		<li id="html-emphasis">
+			<a href="{{ path }}emphasis.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-emphasis.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-emphasis.subtitle }}</span>
+		</li>
+		<li id="html-context">
+			<a href="{{ path }}context.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-context.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-context.subtitle }}</span>
+		</li>
+		<li id="html-details">
+			<a href="{{ path }}details.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-details.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-details.subtitle }}</span>
+		</li>
+		<li id="html-figures">
+			<a href="{{ path }}figures.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-figures.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-figures.subtitle }}</span>
+		</li>
+		<li id="html-forms">
+			<a href="{{ path }}forms.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-forms.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-forms.subtitle }}</span>
+		</li>
+		<li id="html-headings">
+			<a href="{{ path }}headings.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-headings.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-headings.subtitle }}</span>
+		</li>
+		<li id="html-ids">
+			<a href="{{ path }}ids.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-ids.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-ids.subtitle }}</span>
+		</li>
+		<li id="html-iframes">
+			<a href="{{ path }}iframes.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-iframes.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-iframes.subtitle }}</span>
+		</li>
+		<li id="html-lang">
+			<a href="{{ path }}lang.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-lang.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-lang.subtitle }}</span>
+		</li>
+		<li id="html-links">
+			<a href="{{ path }}links.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-links.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-links.subtitle }}</span>
+		</li>
+		<li id="html-lists">
+			<a href="{{ path }}lists.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-lists.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-lists.subtitle }}</span>
+		</li>
+		<li id="html-main">
+			<a href="{{ path }}main.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-main.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-main.subtitle }}</span>
+		</li>
+		<li id="html-mathml">
+			<a href="{{ path }}mathml.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-mathml.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-mathml.subtitle }}</span>
+		</li>
+		<li id="html-meta">
+			<a href="{{ path }}meta.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-meta.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-meta.subtitle }}</span>
+		</li>
+		<li id="html-object">
+			<a href="{{ path }}object.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-object.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-object.subtitle }}</span>
+		</li>
+		<li id="html-title">
+			<a href="{{ path }}title.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-title.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-title.subtitle }}</span>
+		</li>
+		<li id="html-quote">
+			<a href="{{ path }}quotes.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-quote.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-quote.subtitle }}</span>
+		</li>
+		<li id="html-sections">
+			<a href="{{ path }}sections.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-sections.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-sections.subtitle }}</span>
+		</li>
+		<li id="html-dir">
+			<a href="{{ path }}dir.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-dir.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-dir.subtitle }}</span>
+		</li>
+		<li id="html-svg">
+			<a href="{{ path }}svg.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-svg.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-svg.subtitle }}</span>
+		</li>
+		<li id="html-video">
+			<a href="{{ path }}video.html">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-video.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-elem-attr.topics.html-video.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+
+<section id="html-images">
+	<{{ hd }}>{{ site.data[page.language].topics.html.categories.html-images.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="html-image-anim">
+			<a href="{{ path }}images-animated.html">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-anim.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-anim.subtitle }}</span>
+		</li>
+		<li id="html-image-deco">
+			<a href="{{ path }}images-deco.html">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-deco.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-deco.subtitle }}</span>
+		</li>
+		<li id="html-image-icon">
+			<a href="{{ path }}images-icons.html">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-icon.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-icon.subtitle }}</span>
+		</li>
+		<li id="html-image-desc">
+			<a href="{{ path }}images-desc.html">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-desc.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-desc.subtitle }}</span>
+		</li>
+		<li id="html-image-maps">
+			<a href="{{ path }}maps.html">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-maps.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-maps.subtitle }}</span>
+		</li>
+		<li id="html-image-select">
+			<a href="{{ path }}images-selection.html">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-select.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-select.subtitle }}</span>
+		</li>
+		<li id="html-image-text">
+			<a href="{{ path }}images-text.html">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-text.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-text.subtitle }}</span>
+		</li>
+		<li id="html-image-qr">
+			<a href="{{ path }}images-qr.html">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-qr.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-images.topics.html-image-qr.subtitle }}</span>
+		</li>
+		<li id="html-textbased">
+			<a href="{{ path }}images-text-based.html">{{ site.data[page.language].topics.html.categories.html-images.topics.html-textbased.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-images.topics.html-textbased.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+
+<section id="html-tables">
+	<{{ hd }}>{{ site.data[page.language].topics.html.categories.html-tables.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="html-table-basics">
+			<a href="{{ path }}tables-basics.html">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-basics.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-basics.subtitle }}</span>
+		</li>
+		<li id="html-table-headers">
+			<a href="{{ path }}tables-headers.html">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-headers.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-headers.subtitle }}</span>
+		</li>
+		<li id="html-table-scope">
+			<a href="{{ path }}tables-scope.html">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-scope.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-scope.subtitle }}</span>
+		</li>
+		<li id="html-table-layout">
+			<a href="{{ path }}tables-layout.html">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-layout.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-layout.subtitle }}</span>
+		</li>
+		<li id="html-table-captions">
+			<a href="{{ path }}tables-captions.html">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-captions.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-captions.subtitle }}</span>
+		</li>
+		<li id="html-table-summary">
+			<a href="{{ path }}tables-summary.html">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-summary.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-tables.topics.html-table-summary.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+
+<section id="html-structures">
+	<{{ hd }}>{{ site.data[page.language].topics.html.categories.html-structures.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="html-biblio">
+			<a href="{{ path }}bibliographies.html">{{ site.data[page.language].topics.html.categories.html-structures.topics.html-biblio.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-structures.topics.html-biblio.subtitle }}</span>
+		</li>
+		<li id="html-glossary">
+			<a href="{{ path }}glossaries.html">{{ site.data[page.language].topics.html.categories.html-structures.topics.html-glossary.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-structures.topics.html-glossary.subtitle }}</span>
+		</li>
+		<li id="html-indexes">
+			<a href="{{ path }}indexes.html">{{ site.data[page.language].topics.html.categories.html-structures.topics.html-indexes.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-structures.topics.html-indexes.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+	
+<section id="html-patterns">
+	<{{ hd }}>{{ site.data[page.language].topics.html.categories.html-patterns.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="html-dropcaps">
+			<a href="{{ path }}dropcaps.html">{{ site.data[page.language].topics.html.categories.html-patterns.topics.html-dropcaps.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-patterns.topics.html-dropcaps.subtitle }}</span>
+		</li>
+		<li id="html-notes">
+			<a href="{{ path }}notes.html">{{ site.data[page.language].topics.html.categories.html-patterns.topics.html-notes.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-patterns.topics.html-notes.subtitle }}</span>
+		</li>
+		<li id="html-hidden-conent">
+			<a href="{{ path }}hidden.html">{{ site.data[page.language].topics.html.categories.html-patterns.topics.html-hidden-content.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-patterns.topics.html-hidden-content.subtitle }}</span>
+		</li>
+		<li id="html-poetry">
+			<a href="{{ path }}poetry.html">{{ site.data[page.language].topics.html.categories.html-patterns.topics.html-poetry.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-patterns.topics.html-poetry.subtitle }}</span>
+		</li>
+		<li id="htmk-refs">
+			<a href="{{ path }}reflinks.html">{{ site.data[page.language].topics.html.categories.html-patterns.topics.html-refs.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-patterns.topics.html-refs.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+
+<section id="html-concepts">
+	<{{ hd }}>{{ site.data[page.language].topics.html.categories.html-concepts.title }}</{{ hd }}>
+	<ol role="list">
+		<li id="html-reading-order">
+			<a href="{{ path }}order.html">{{ site.data[page.language].topics.html.categories.html-concepts.topics.html-reading-order.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-concepts.topics.html-reading-order.subtitle }}</span>
+		</li>
+		<li id="html-sep-style">
+			<a href="{{ path }}separation.html">{{ site.data[page.language].topics.html.categories.html-concepts.topics.html-sep-style.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-concepts.topics.html-sep-style.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+
+<section id="html-aria">
+	<{{ hd }}>{{ site.data[page.language].topics.html.categories.html-aria.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="html-landmarks">
+			<a href="{{ path }}landmarks.html">{{ site.data[page.language].topics.html.categories.html-aria.topics.html-landmarks.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-aria.topics.html-landmarks.subtitle }}</span>
+		</li>
+		<li id="html-role">
+			<a href="{{ path }}roles.html">{{ site.data[page.language].topics.html.categories.html-aria.topics.html-role.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-aria.topics.html-role.subtitle }}</span>
+		</li>
+		<li id="html-dpub">
+			<a href="{{ path }}dpub-aria/index.html">{{ site.data[page.language].topics.html.categories.html-aria.topics.html-dpub.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-aria.topics.html-dpub.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+
+<section id="html-semantics">
+	<{{ hd }}>{{ site.data[page.language].topics.html.categories.html-semantics.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="epub-type">
+			<a href="{{ path }}epub-type.html">{{ site.data[page.language].topics.html.categories.html-semantics.topics.epub-type.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.html.categories.html-semantics.topics.epub-type.subtitle }}</span>
+		</li>
+	</ol>
+</section>

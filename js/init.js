@@ -10,180 +10,6 @@
  */
 
 
-/* flip to https on site */
-
-if (window.location.hostname.toLowerCase() === 'kb.daisy.org' && window.location.protocol === 'http:') {
-  const httpsUrl = 'https://' + window.location.host + window.location.pathname + window.location.search + window.location.hash;
-  window.location.replace(httpsUrl);
-}
-
-/* ------------ */
-
-
-var lang = document.documentElement.lang ? document.documentElement.lang.toLowerCase() : 'en';
-
-var msg, topic_list, sc_map;
-
-/* hack to eliminate the flash of unstyled content */
-document.documentElement.style.display = 'none';
-
-
-
-
-/* 
- * 
- * 
- * KB Class
- * - consider importing this over embedding if IE ever dies
- * 
- * 
- */
-
-
-
-function KB() {
-	
-	this.kb_url = 'https://kb.daisy.org/';
-	this.kb_repo = 'https://github.com/DAISY/kb/commits/main/';
-	this.kb_id = (window.location.href.split('/'))[3];
-	this.host = '';
-	
-	this.page_hd = document.getElementsByTagName('head')[0];
-	this.lang = lang;
-	
-	if (page_info.hasOwnProperty('404') && page_info['404']) {
-		if (document.location.href.match('/ja/')) {
-			lang = 'ja';
-			this.lang = 'ja';
-		}
-	}
-
-
-	this.kb_root = '/' + this.kb_id + '/' + (this.lang == 'en' ? 'docs/' : this.lang + '/');
-	
-	this.isRootIndex = page_info.hasOwnProperty('isRootIndex') && page_info['isRootIndex'] ? true : false;
-	this.isCategoryIndex = (page_info.hasOwnProperty('isIndex') && page_info['isIndex']) ? true : false;
-	this.isIndex = (this.isRootIndex || this.isCategoryIndex) ? true : false;
-	this.isSubIndex = page_info.hasOwnProperty('subIndex') && page_info['subIndex'] ? true : false;
-	this.isSearch = page_info.hasOwnProperty('search') ? true : false;
-	this.isHomePage = page_info.hasOwnProperty('isSiteHome') ? true : false;
-	this.noCategory = (!page_info.hasOwnProperty('category')) ? true : false;
-	this.noTopLink = page_info.hasOwnProperty('noTopLink') ? true: false;
-	this.noTitle = page_info.hasOwnProperty('noTitle') ? true: false;
-	this.noFooter = (page_info.hasOwnProperty('footer') && !page_info['footer']) ? true : false;
-	this.details = (page_info.hasOwnProperty('details') && page_info['details']) ? true : false;
-	
-	this.title = document.title;
-}
-
-
-/* 
- * Generates the header meta, css and js tags needed to generate the template
- */
-
-KB.prototype.initializePage = function (type) {
-	if (type == 'kb') {
-		
-		this.host = 'kb';
-		
-		var url = window.location.href.toString();
-		if (!url.match('https://')) {
-			url = url.replace('http://', 'https://');
-		}
-		
-		this.writeHeadTag('js', 'https://smart.daisy.org/js/sponsor.js');
-		this.writeHeadTag('css', '/css/kb.css');
-		this.writeHeadTag('css', '/css/sponsor.css');
-		this.writeHeadTag('css', '/css/prettify.css');
-		
-		if (this.isIndex || this.isHomePage) {
-			this.writeHeadTag('css', '/css/primary-nav.css');
-		}
-		
-		this.writeHeadTag('js', '/js/prettify.js');
-		this.writeGoogleAnalytics();
-		this.writeHeadTag('favicon', null, null);
-		
-		if (this.details) {
-			this.writeHeadTag('js', 'https://code.jquery.com/jquery-2.2.4.min.js', { 'integrity': 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', 'crossorigin': 'anonymous'});
-			this.writeHeadTag('js', '/js/details.js', {'defer': 'true'});
-		}
-	}
-	else {
-		this.host = 'ace';
-		// add ace desired heading tags here
-	}
-}
-
-
-/* 
- * generic function that write a meta or link tag depending on the type of file being referenced
- */
-
-KB.prototype.writeHeadTag = function (type, path, options) {
-
-	var tag;
-	
-	if (type == "css") {
-		// generate a link tag for css references
-		tag = document.createElement('link');
-		tag.setAttribute('rel', 'stylesheet');
-		tag.setAttribute('href', path);
-	}
-	
-	else if (type == 'js') {
-		// generate a script tag for js references
-		tag = document.createElement('script');
-		tag.setAttribute('src', path);
-		
-		/* 
-		 * options can be used if additional attribute are needed (e.g., async)
-		 * - must contain an array of attribute names and values
-		 */
-		
-		if (options) { 
-			for (var property in options) {
-				if (options.hasOwnProperty(property)) {
-					tag.setAttribute(property, options[property]);
-				}
-			}
-		}
-	}
-	
-	else if (type === 'favicon') {
-		tag = document.createElement('link');
-		tag.setAttribute('rel', 'icon');
-		tag.setAttribute('type', 'image/x-icon');
-		tag.setAttribute('href', this.kb_url + 'favicon.ico');
-		tag.setAttribute('sizes', 'any');
-	}
-	
-	// add the generated tag to the page header
-	this.page_hd.appendChild(tag);
-}
-
-
-
-/* 
- * writes the google analytics code
- */
-
-KB.prototype.writeGoogleAnalytics = function () {
-
-	this.writeHeadTag('js', 'https://www.googletagmanager.com/gtag/js?id=G-FKBYKZH39R', {async: 'async'});
-	
-	var ga = document.createElement('script');
-		ga.appendChild(document.createTextNode("\
-			window.dataLayer = window.dataLayer || [];\
-			function gtag(){dataLayer.push(arguments);}\
-			gtag('js', new Date());\
-			gtag('config', 'G-FKBYKZH39R');\
-		"));
-	
-	this.page_hd.appendChild(ga);
-
-}
-
 
 /* 
  * reformats the page for visual display depending on the hosting location (on the web or inside an ace browser view)
@@ -193,13 +19,6 @@ KB.prototype.writeTemplate = function () {
 
 	if (this.host == 'kb') {
 	
-		kb.generateHeader();
-		
-		// don't regenerate the body for the search page or the results won't get returned to the div
-		if (!this.isSearch) {
-			kb.generateBody();
-		}
-		
 		kb.generatePageTitle();
 		
 		if (this.isIndex && page_info.root_id !== 'glossary') {
@@ -238,7 +57,6 @@ KB.prototype.writeTemplate = function () {
 		kb.generateFooter();
 		
 		if (!this.isIndex && !this.isSearch && !this.isHomePage) {
-			kb.prettyPrint();
 			// kb.addGlossaryLinks();
 			kb.addPermaLinks();
 			kb.generateWCAGLinks();
@@ -256,108 +74,6 @@ KB.prototype.writeTemplate = function () {
 	}
 }
 
-
-/* generates the standard page header */
-
-KB.prototype.generateHeader = function () {
-
-	var header = document.createElement('header');
-	
-	var skip_a = document.createElement('a');
-		skip_a.setAttribute('href', '#main');
-		skip_a.setAttribute('id','skip-main');
-		skip_a.appendChild(document.createTextNode(msg.header.skip));
-	
-	header.appendChild(skip_a);
-	
-	document.getElementsByTagName('main')[0].setAttribute('id','main');
-	
-	var h1 = document.createElement('h1');
-	
-	var h1_a = document.createElement('a');
-		h1_a.setAttribute('href', this.kb_root);
-		h1_a.setAttribute('class', 'home-link');
-		
-	// add the daisy logo
-	var logo = document.createElement('img');
-		logo.setAttribute('class','logo');
-		logo.setAttribute('src','/graphics/daisy_high.jpg');
-		logo.setAttribute('alt', msg.header.logo);
-	
-	h1_a.appendChild(logo);
-	
-	// add kb name
-	h1_a.appendChild(document.createTextNode(' ' + msg.kb_name[this.kb_id]));
-	
-	h1.appendChild(h1_a);
-	
-	header.appendChild(h1);
-	
-	var search = document.createElement('search');
-		search.setAttribute('title', msg.kb_name.kb);
-		search.setAttribute('hidden', 'hidden');
-	
-	var search_script = document.createElement('script');
-		search_script.setAttribute('async', '');
-		search_script.setAttribute('src', 'https://cse.google.com/cse.js?cx=012567327240487320396:ngadtxfagto');
-	
-	search.appendChild(search_script);
-	
-	var search_box = document.createElement('div');
-		search_box.setAttribute('class', 'gcse-searchbox-only');
-		search_box.setAttribute('data-lr', 'lang_'  + this.lang);
-		search_box.setAttribute('data-gl', 'lang_'  + this.lang);
-		
-		if (this.lang !== 'en') {
-			search_box.setAttribute('data-resultsUrl', '/publishing/' + this.lang + '/search/');
-		}
-	
-	search.appendChild(search_box);
-	header.appendChild(search);
-	
-	document.body.insertAdjacentElement('afterBegin',header);
-}
-
-
-/* generates the standard page body inside main */
-
-KB.prototype.generateBody = function () {
-	
-	// create a new main element to contain the body
-	var new_main = document.createElement('main');
-		new_main.id = 'main';
-	
-	var is2Col = ((page_info.hasOwnProperty('nav') && !page_info.nav) || page_info.isIndex) ? true : false;
-	
-	// create the flex layout container
-	var flex_div = document.createElement('div');
-		flex_div.setAttribute('id', 'col-wrapper');
-	
-	if (is2Col) {
-		flex_div.setAttribute('class','two-col');
-	}
-	
-	new_main.appendChild(flex_div);
-	
-	// create new body div for the page content
-	var new_body = document.createElement('div');
-		new_body.setAttribute('id', 'body');
-
-	if (is2Col) {
-		new_body.setAttribute('class','two-col');
-	}
-	
-	// copy the old main inside
-	var old_main = document.getElementsByTagName('main')[0];
-		new_body.innerHTML = old_main.innerHTML;
-	
-	// add the new main element and delete the old
-	flex_div.appendChild(new_body);
-	
-	document.getElementsByTagName('header')[0].insertAdjacentElement('afterEnd', new_main);
-	
-	document.body.removeChild(old_main);
-}
 
 
 /* creates the page title and category for the current topic */
@@ -1101,15 +817,6 @@ KB.prototype.createFooterLink = function(link_info) {
 }
 
 
-/* call the google pretty print function for examples */
-
-KB.prototype.prettyPrint = function() {
-	if (!this.isIndex && !this.isSearch && !this.isHomePage) {
-		prettyPrint();
-	}
-}
-
-
 /* add buttons to copy example text */
 
 KB.prototype.addExampleCopy = function() {
@@ -1171,43 +878,8 @@ KB.prototype.addGlossaryLinks = function() {
 
 KB.prototype.addPermaLinks = function() {
 
-	var hasExamples = document.getElementById('ex');
-	
-	if (hasExamples) {
-		var examples = hasExamples.querySelectorAll('.label');
-		
-		for (var i = 0; i < examples.length; i++) {
-			var permalink = this.createPermaLink(i+1, 'example', examples[i].parentNode.parentNode.id);
-			examples[i].insertAdjacentElement('afterBegin', permalink);
-		}
-	}
-	
-	var hasFAQ = document.getElementById('faq');
-	
-	if (hasFAQ) {
-		var faqs = hasFAQ.querySelectorAll('dt');
-		
-		for (var i = 0; i < faqs.length; i++) {
-			var permalink = this.createPermaLink(i+1, 'FAQ', faqs[i].id);
-			faqs[i].insertAdjacentElement('afterBegin', permalink);
-		}
-	}
 }
 
-
-/* creates a permalink for the specified content */
-
-KB.prototype.createPermaLink = function(num, label, dest) {
-
-	var a = document.createElement('a');
-		a.href = '#' + dest;
-		a.setAttribute('class', 'permalink');
-		a.setAttribute('aria-label', msg.pageControl.permalink + label + ' ' + num);
-		a.appendChild(document.createTextNode(msg.pageControl.permalinkSymbol));
-	
-	return a;
-
-}
 
 
 /* write the navigation topics */
@@ -1455,93 +1127,11 @@ KB.prototype.formatSearchPage = function () {
 }
 
 
-/* 
- * 
- * Change the page language
- * 
- */
-
-function switchLanguage(elem) {
-	var old_lang = lang === 'en' ? 'docs' : lang;
-	var new_lang = elem.value === 'en' ? 'docs' : elem.value;
-	document.location.href = document.location.href.replace('/'+old_lang+'/', '/'+new_lang+'/');
-}
-
-
-/* 
- * 
- * Example copying callback functions
- * 
- */
-
-
-function copyExampleDelegate(ex_id) {
-	return function(){
-		copyExample(ex_id);
-	}
-}
-
-function copyExample(ex_id) {
-
-	// select the example
-	var pre_orig = document.querySelector('pre#'+ex_id);
-	
-	// create a clone of the element to operate on
-	var pre = pre_orig.cloneNode(true);
-	
-	// grab all the list items in the example (each li is a pretty-printed line of code)
-	var li = pre.querySelectorAll('li');
-	
-	// add a line break to the end of each list item so formatting is retained when the li tags are stripped later
-	for (var i = 0; i < li.length; i++) {
-		li[i].appendChild(document.createTextNode('\n'));
-	}
-	
-	// create a temporary textarea to copy the example out of and paste the text content of the example into it to remove any tags
-	var textArea = document.createElement("textarea");
-		textArea.value = pre.textContent;
-	
-	document.body.appendChild(textArea);
-	
-	textArea.select();
-	
-	// copy the example to the clipboard
-	try {
-		document.execCommand('copy');
-		alert('Code successfully copied.')
-	}
-	catch (err) {
-		console.error('Copy failed: ', err);
-	}
-	
-	// discard the textarea
-	document.body.removeChild(textArea);
-}
 
 
 
 
 
-/* 
- * 
- * 
- * INITIALIZATION
- * 
- * 
- * 
- */
-
-var kb = new KB();
-
-// write the header tags immediately so that js and css are processed
-if (document.location.host == 'kb.daisy.org' || document.location.host.match(/^localhost/i)) {
-	kb.initializePage('kb');
-}
-
-else {
-	// not yet implemented, but allows use in ace without web wrapper
-	kb.initializePage('ace');
-}
 
 window.onload = function () {
 	loadPage();

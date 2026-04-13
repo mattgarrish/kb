@@ -1,0 +1,28 @@
+{% if page.language == "en" %}
+	{% assign path = "/publishing/docs/text-to-speech/" %}
+{% else %}
+	{% assign path = "/publishing/" + page.language + "/text-to-speech/"  %}
+{% endif %}
+
+<ol role="list">
+	<li id="tts-overview">
+		<a href="{{ path }}overview.html">{{ site.data[page.language].topics.tts.topics.tts-overview.title }}</a>
+		<br>
+		<span class="topic_subtitle">{{ site.data[page.language].topics.tts.topics.tts-overview.subtitle }}</span>
+	</li>
+	<li id="tts-speech">
+		<a href="{{ path }}speech.html">{{ site.data[page.language].topics.tts.topics.tts-speech.title }}</a>
+		<br>
+		<span class="topic_subtitle">{{ site.data[page.language].topics.tts.topics.tts-speech.subtitle }}</span>
+	</li>
+	<li id="tts-pls">
+		<a href="{{ path }}pls.html">{{ site.data[page.language].topics.tts.topics.tts-pls.title }}</a>
+		<br>
+		<span class="topic_subtitle">{{ site.data[page.language].topics.tts.topics.tts-pls.subtitle }}</span>
+	</li>
+	<li id="tts-ssml">
+		<a href="{{ path }}ssml.html">{{ site.data[page.language].topics.tts.topics.tts-ssml.title }}</a>
+		<br>
+		<span class="topic_subtitle">{{ site.data[page.language].topics.tts.topics.tts-ssml.subtitle }}</span>
+	</li>
+</ol>

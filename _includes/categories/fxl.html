@@ -1,0 +1,64 @@
+{% if page.allTopics %}
+	{% assign hd = "h4" %}
+{% else %}
+	{% assign hd = "h3" %}
+{% endif %}
+
+{% if page.language == "en" %}
+	{% assign path = "/publishing/docs/fxl/" %}
+{% else %}
+	{% assign path = "/publishing/" + page.language + "/fxl/"  %}
+{% endif %}
+
+<section id="fxl-general">
+	<{{ hd }}>{{ site.data[page.language].topics.fxl.categories.fxl-general.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="fxl-overview">
+			<a href="{{ path }}overview.html" aria-label="{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-overview.aria-label }}">{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-overview.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-overview.subtitle }}</span>
+		</li>
+		<li id="fxl-html">
+			<a href="{{ path }}html.html">{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-html.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-html.subtitle }}</span>
+		</li>
+		<li id="fxl-img-spine">
+			<a href="{{ path }}img-spine.html">{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-img-spine.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-img-spine.subtitle }}</span>
+		</li>
+		<li id="fxl-svg">
+			<a href="{{ path }}svg.html">{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-svg.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-svg.subtitle }}</span>
+		</li>
+		<li id="fxl-wcag">
+			<a href="{{ path }}wcag.html">{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-wcag.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.fxl.categories.fxl-general.topics.fxl-wcag.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+
+<section id="fxl-tech">
+	<{{ hd }}>{{ site.data[page.language].topics.fxl.categories.fxl-tech.title }}</{{ hd }}>
+	<ol role="list">
+		<li id="fxl-img">
+			<a href="{{ path }}img.html" aria-label="{{ site.data[page.language].topics.fxl.categories.fxl-tech.topics.fxl-img.aria-label }}">{{ site.data[page.language].topics.fxl.categories.fxl-tech.topics.fxl-img.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.fxl.categories.fxl-tech.topics.fxl-img.subtitle }}</span>
+		</li>
+		<li id="fxl-spreads">
+			<a href="{{ path }}spreads.html">{{ site.data[page.language].topics.fxl.categories.fxl-tech.topics.fxl-spreads.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.fxl.categories.fxl-tech.topics.fxl-spreads.subtitle }}</span>
+		</li>
+		<li id="fxl-orient">
+			<a href="{{ path }}orientation.html">{{ site.data[page.language].topics.fxl.categories.fxl-tech.topics.fxl-orient.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.fxl.categories.fxl-tech.topics.fxl-orient.subtitle }}</span>
+		</li>
+	</ol>
+</section>

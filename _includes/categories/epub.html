@@ -1,0 +1,80 @@
+{% if page.allTopics %}
+	{% assign hd = "h4" %}
+{% else %}
+	{% assign hd = "h3" %}
+{% endif %}
+
+{% if page.language == "en" %}
+	{% assign path = "/publishing/docs/epub/" %}
+{% else %}
+	{% assign path = "/publishing/" + page.language + "/epub/"  %}
+{% endif %}
+
+<section id="epub-general">
+	<{{ hd }}>{{ site.data[page.language].topics.epub.categories.epub-general.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="epub-cmt">
+			<a href="{{ path }}cmt.html">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-cmt.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-cmt.subtitle }}</span>
+		</li>
+		<li id="epub-cover">
+			<a href="{{ path }}cover.html">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-cover.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-cover.subtitle }}</span>
+		</li>
+		<li id="epub-title">
+			<a href="{{ path }}title.html">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-title.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-title.subtitle }}</span>
+		</li>
+		<li id="epub-order">
+			<a href="{{ path }}reading-order.html">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-order.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-order.subtitle }}</span>
+		</li>
+		<li id="epub-remote">
+			<a href="{{ path }}remote-resources.html">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-remote.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-remote.subtitle }}</span>
+		</li>
+		<li id="epub-language">
+			<a href="{{ path }}language.html">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-language.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-language.subtitle }}</span>
+		</li>
+		<li id="epub-dir">
+			<a href="{{ path }}dir.html">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-dir.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-general.topics.epub-dir.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+
+<section id="epub-validation">
+	<{{ hd }}>{{ site.data[page.language].topics.epub.categories.epub-validation.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="epub-val-overview">
+			<a href="{{ path }}validation/overview.html">{{ site.data[page.language].topics.epub.categories.epub-validation.topics.epub-val-overview.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-validation.topics.epub-val-overview.subtitle }}</span>
+		</li>
+		<li id="epub-val-epubcheck">
+			<a href="{{ path }}validation/epubcheck.html">{{ site.data[page.language].topics.epub.categories.epub-validation.topics.epub-val-epubcheck.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-validation.topics.epub-val-epubcheck.subtitle }}</span>
+		</li>
+		<li id="epub-val-ace">
+			<a href="{{ path }}validation/ace.html">{{ site.data[page.language].topics.epub.categories.epub-validation.topics.epub-val-ace.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-validation.topics.epub-val-ace.subtitle }}</span>
+		</li>
+		<li id="epub-val-smart">
+			<a href="{{ path }}validation/smart.html">{{ site.data[page.language].topics.epub.categories.epub-validation.topics.epub-val-smart.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.epub.categories.epub-validation.topics.epub-val-smart.subtitle }}</span>
+		</li>
+	</ol>
+</section>

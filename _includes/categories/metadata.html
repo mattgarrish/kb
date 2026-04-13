@@ -1,0 +1,95 @@
+{% if page.allTopics %}
+	{% assign hd = "h4" %}
+{% else %}
+	{% assign hd = "h3" %}
+{% endif %}
+
+{% if page.language == "en" %}
+	{% assign path = "/publishing/docs/metadata/" %}
+{% else %}
+	{% assign path = "/publishing/" + page.language + "/metadata/"  %}
+{% endif %}
+
+<section id="meta-general">
+	<{{ hd }}>{{ site.data[page.language].topics.metadata.categories.meta-general.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="meta-evaluation">
+			<a href="{{ path }}evaluation.html">{{ site.data[page.language].topics.metadata.categories.meta-general.topics.meta-evaluation.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-general.topics.meta-evaluation.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+<section id="meta-schema">
+	<{{ hd }}>{{ site.data[page.language].topics.metadata.categories.meta-schema.title }}</{{ hd }}>
+	
+	<ol role="list">
+		<li id="schema-overview">
+			<a href="{{ path }}schema.org/index.html">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-overview.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-overview.subtitle }}</span>
+		</li>
+		<li id="schema-a11yAPI">
+			<a href="{{ path }}schema.org/accessibilityAPI.html">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-a11yAPI.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-a11yAPI.subtitle }}</span>
+		</li>
+		<li id="schema-a11yControl">
+			<a href="{{ path }}schema.org/accessibilityControl.html">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-a11yControl.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-a11yControl.subtitle }}</span>
+		</li>
+		<li id="schema-a11yFeature">
+			<a href="{{ path }}schema.org/accessibilityFeature.html">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-a11yFeature.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-a11yFeature.subtitle }}</span>
+		</li>
+		<li id="schema-a11yHazard">
+			<a href="{{ path }}schema.org/accessibilityHazard.html">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-a11yHazard.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-a11yHazard.subtitle }}</span>
+		</li>
+		<li id="schema-a11ySummary">
+			<a href="{{ path }}schema.org/accessibilitySummary.html">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-a11ySummary.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-a11ySummary.subtitle }}</span>
+		</li>
+		<li id="schema-accessMode">
+			<a href="{{ path }}schema.org/accessMode.html">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-accessMode.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-accessMode.subtitle }}</span>
+		</li>
+		<li id="schema-accessModeSufficient">
+			<a href="{{ path }}schema.org/accessModeSufficient.html">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-accessModeSufficient.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-schema.topics.schema-accessModeSufficient.subtitle }}</span>
+		</li>
+	</ol>
+</section>
+
+<section id="meta-onix">
+	<{{ hd }}>{{ site.data[page.language].topics.metadata.categories.meta-onix.title }}</{{ hd }}>
+	<ol role="list">
+		<li id="onix-overview">
+			<a href="{{ path }}onix/index.html">{{ site.data[page.language].topics.metadata.categories.meta-onix.topics.onix-overview.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-onix.topics.onix-overview.subtitle }}</span>
+		</li>
+		<li id="onix-codelist-196">
+			<a href="{{ path }}onix/codelist-196/">{{ site.data[page.language].topics.metadata.categories.meta-onix.topics.onix-codelist-196.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-onix.topics.onix-codelist-196.subtitle }}</span>
+		</li>
+		<li id="onix-codelist-143">
+			<a href="{{ path }}onix/codelist-143/">{{ site.data[page.language].topics.metadata.categories.meta-onix.topics.onix-codelist-143.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-onix.topics.onix-codelist-143.subtitle }}</span>
+		</li>
+		<li id="onix-codelist-81">
+			<a href="{{ path }}onix/codelist-81/">{{ site.data[page.language].topics.metadata.categories.meta-onix.topics.onix-codelist-81.title }}</a>
+			<br>
+			<span class="topic_subtitle">{{ site.data[page.language].topics.metadata.categories.meta-onix.topics.onix-codelist-81.subtitle }}</span>
+		</li>
+	</ol>
+</section>
