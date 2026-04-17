@@ -1,4 +1,4 @@
-{% assign cat-list = "conformance,epub,navigation,metadata,html,css,script,fxl,sync-media,tts" | split: ',' %}
+{% assign cat-list = "conformance,css,epub,fxl,html,metadata,navigation,script,sync-media,tts" | split: ',' %}
 
 {% if page.language == "en" %}
 	{% assign path = "docs" %}
@@ -8,10 +8,12 @@
 	
 <div id="categories">
 	<nav role="doc-toc" class="mini-toc" aria-labelledby="cat-hd">
-		<h3 id="cat-hd">{{ site.data[page.language].ui.category.cat }}</h3>
+		<h3 id="cat-hd">{{ site.data[page.language].ui.category.category }}</h3>
 		<ol role="list">
 			{% for category in cat-list %}
-				<li{% if category == page.category %} class="active-cat" aria-current="location"{% endif %}><a href="/publishing/{{ path }}/{{ category }}/index.html">{{ site.data[page.language].topics[category].title }}</a></li:>
+				<li{% if category == page.category %} class="active-cat" aria-current="location"{% endif %}>
+					<a href="/publishing/{{ path }}/{{ category }}/index.html">{{ site.data[page.language].ui.category[category] }}</a>
+				</li>
 			{% endfor %}
 		</ol>
 	</nav>

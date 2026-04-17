@@ -17,16 +17,16 @@
 	},
 	
 	"category": {
-		"cat": "Categories",
-		"conf": "Conformance",
+		"category": "Categories",
+		"conformance": "Conformance",
 		"css": "CSS",
 		"epub": "EPUB",
 		"fxl": "Fixed Layouts",
 		"html": "HTML",
-		"meta": "Metadata",
-		"nav": "Navigation",
+		"metadata": "Metadata",
+		"navigation": "Navigation",
 		"script": "Scripting",
-		"sync": "Sync Media",
+		"sync-media": "Sync Media",
 		"tts": "Text-to-Speech"
 	},
 	
@@ -54,14 +54,6 @@
 		"ja": "Japanese"
 	},
 	
-	"shortForm": {
-		"Frequently Asked Questions": "FAQ"
-	},
-	
-	"appliesto": {
-		"audiobooks": "* Applies to the table of contents and any supplementary HTML resources."
-	},
-	
 	"pageControl": {
 		"copy": "Copy",
 		"dfnLink": "Go to definition",
@@ -77,6 +69,7 @@
 	"appliesTo": {
 		"yes": "Yes",
 		"no": "No",
-		"partial": "Partial"
+		"partial": "Partial",
+		"partialNote": "* Applies to the table of contents and any supplementary HTML resources."
 	}
 }

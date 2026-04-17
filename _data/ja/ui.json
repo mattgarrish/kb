@@ -14,16 +14,16 @@
     "logo": "DAISY"
   },
   "category": {
-    "cat": "カテゴリー",
-    "conf": "適合性（conformance）",
+    "category": "カテゴリー",
+    "conformance": "適合性（conformance）",
     "css": "CSS",
     "epub": "EPUB",
     "fxl": "固定レイアウト",
     "html": "HTML",
-    "meta": "メタデータ",
-    "nav": "ナビゲーション",
+    "metadata": "メタデータ",
+    "navigation": "ナビゲーション",
     "script": "スクリプト",
-    "sync": "メディアの同期",
+    "sync-media": "メディアの同期",
     "tts": "テキスト読み上げ（TTS)"
   },
   "footer": {
@@ -49,12 +49,6 @@
 	"en": "英語",
 	"ja": "日本語"
   },
-  "shortForm": {
-    "Frequently Asked Questions": "よくある質問"
-  },
-  "appliesto": {
-    "audiobooks": "* 目次および補足的なHTMLリソースに適用されます。"
-  },
   "pageControl": {
     "copy": "コピー",
     "dfnLink": "定義へ移動",
@@ -68,6 +62,7 @@
   "appliesTo": {
     "yes": "はい",
     "no": "いいえ",
-    "partial": "部分的"
+    "partial": "部分的",
+	"partialNote": "* 目次および補足的なHTMLリソースに適用されます。"
   }
 }

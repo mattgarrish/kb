@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div id="col-wrapper" class="two-col">
+	<div id="body" class="two-col">
+		<div id="glossary">
+			<h2 class="noCategory">{{ page.title }}</h2>
+			
+			{{ content }}
+		</div>
+		<p class="backtotop"><a href="#">{{ site.data[page.language].ui.footer.top }}</a></p>
+	</div>
+		
+	{% include categories.html %}
+</div>

@@ -301,39 +301,39 @@
 			"html-images": {
 				"title": "画像",
 				"topics": {
-					"html-image-anim": {
+					"images-animated": {
 						"title": "アニメーション画像",
 						"subtitle": "アクセシブルなアニメーション画像のベストプラクティス"
 					},
-					"html-image-deco": {
+					"images-deco": {
 						"title": "装飾画像",
 						"subtitle": "ユーザーに情報を伝えていない画像を識別する方法"
 					},
-					"html-image-icon": {
+					"images-icons": {
 						"title": "アイコン",
 						"subtitle": "アクセシブルなアイコンを含める方法のベストプラクティス"
 					},
-					"html-image-desc": {
+					"images-desc": {
 						"title": "画像の説明",
 						"subtitle": "代替テキストや説明についての方法や書き方のコツ"
 					},
-					"html-image-maps": {
+					"maps": {
 						"title": "イメージマップ",
 						"subtitle": "アクセシブルなイメージマップを含めるためのベストプラクティス"
 					},
-					"html-image-select": {
+					"images-selection": {
 						"title": "画像の選択",
 						"subtitle": "さまざまなデバイスのレンダリング機能に合わせて最適化した画像を組み込む方法"
 					},
-					"html-image-text": {
+					"images-text": {
 						"title": "文字画像",
 						"subtitle": "画像にテキストが含まれている場合のベストプラクティス"
 					},
-					"html-image-qr": {
+					"images-qr": {
 						"title": "QRコード",
 						"subtitle": "QRコードを付加するベストプラクティス"
 					},
-					"html-textbased": {
+					"images-text-based": {
 						"title": "テキストベースの画像",
 						"subtitle": "ASCII アート、絵文字、編集されたテキスト、空欄補充問題などのテキストベースの画像をアクセシブルにする手法"
 					}
@@ -342,27 +342,27 @@
 			"html-tables": {
 				"title": "表",
 				"topics": {
-					"html-table-basics": {
+					"tables-basics": {
 						"title": "表の基本",
 						"subtitle": "アクセシブルな表のマークアップ方法の基本の紹介"
 					},
-					"html-table-headers": {
+					"tables-headers": {
 						"title": "複雑なヘッダー",
 						"subtitle": "複雑な表のヘッダーをアクセシブルにするためのベストプラクティス"
 					},
-					"html-table-scope": {
+					"tables-scope": {
 						"title": "ヘッダースコープ",
 						"subtitle": "テーブルヘッダーが行と列のどちらに適用されるかの識別"
 					},
-					"html-table-layout": {
+					"tables-layout": {
 						"title": "レイアウトに使用する表",
 						"subtitle": "レイアウトに使用する表を避けられない場合のベストプラクティス"
 					},
-					"html-table-captions": {
+					"tables-captions": {
 						"title": "表のキャプション",
 						"subtitle": "表の目的を説明するキャプションの追加"
 					},
-					"html-table-summary": {
+					"tables-summary": {
 						"title": "表の概要",
 						"subtitle": "表の構造を説明する要約の追加"
 					}

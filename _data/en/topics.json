@@ -318,39 +318,39 @@
 			"html-images": {
 				"title": "Images",
 				"topics": {
-					"html-image-anim": {
+					"images-animated": {
 						"title": "Animated Images",
 						"subtitle": "Best practices for accessible animated images."
 					},
-					"html-image-deco": {
+					"images-deco": {
 						"title": "Decorative Images",
 						"subtitle": "How to identify images that do not convey information to users."
 					},
-					"html-image-icon": {
+					"images-icons": {
 						"title": "Icons",
 						"subtitle": "Best practices for including accessible icons."
 					},
-					"html-image-desc": {
+					"images-desc": {
 						"title": "Image Descriptions",
 						"subtitle": "Methods and writing techniques for alternative text and descriptions."
 					},
-					"html-image-maps": {
+					"maps": {
 						"title": "Image Maps",
 						"subtitle": "Best practices for including accessible image maps."
 					},
-					"html-image-select": {
+					"images-selection": {
 						"title": "Image Selection",
 						"subtitle": "Methods for including images optimized for different device rendering capabilities."
 					},
-					"html-image-text": {
+					"images-text": {
 						"title": "Images of Text",
 						"subtitle": "Best practices when images contain text."
 					},
-					"html-image-qr": {
+					"images-qr": {
 						"title": "QR Codes",
 						"subtitle": "Best practices for adding QR codes."
 					},
-					"html-textbased": {
+					"images-text-based": {
 						"title": "Text-based Images",
 						"subtitle": "Techniques for making accessible text-based images, such as ASCII art, emoticons, redacted text, and fill-in-the-blank questions."
 					}
@@ -359,27 +359,27 @@
 			"html-tables": {
 				"title": "Tables",
 				"topics": {
-					"html-table-basics": {
+					"tables-basics": {
 						"title": "Table Basics",
 						"subtitle": "Introduction to the basics of accessible table markup."
 					},
-					"html-table-headers": {
+					"tables-headers": {
 						"title": "Complex Headers",
 						"subtitle": "Best practices for making complex table headers accessible."
 					},
-					"html-table-scope": {
+					"tables-scope": {
 						"title": "Header Scope",
 						"subtitle": "Identifying when table headers apply to row or columns."
 					},
-					"html-table-layout": {
+					"tables-layout": {
 						"title": "Layout Tables",
 						"subtitle": "Best practices for when table layouts cannot be avoided."
 					},
-					"html-table-captions": {
+					"tables-captions": {
 						"title": "Table Captions",
 						"subtitle": "Adding a caption to explain the purpose of a table."
 					},
-					"html-table-summary": {
+					"tables-summary": {
 						"title": "Table Summaries",
 						"subtitle": "Adding a summary to describe the structure of a table."
 					}

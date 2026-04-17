@@ -1,16 +1,28 @@
+{% if page.index or page.allTopics %}
+	{% assign classes = "index" %}
+{% elsif page.search %}
+	{% assign classes = "search" %}
+{% elsif page.subcategory == "dpub-aria" %}
+	{% assign classes = "main" %}
+{% elsif page.root %}
+	{% assign classes = "" %}
+{% else %}
+	{% assign classes = "category" %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		{%include head.html%}
+		{% include head.html %}
 	</head>
 
 	<body>
-		{%include header.html%}
+		{% include header.html %}
 		
-		<main id="main" class="{% if page.index or page.allTopics %}index {%endif %}category">
+		<main id="main" class="{{ classes }}">
+			{% include support.html %}
 			{{content}}
 		</main>
 		
-		{%include footer.html%}
+		{% include footer.html %}
 	</body>
 </html>
