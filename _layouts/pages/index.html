@@ -1,10 +1,19 @@
 ---
 layout: two-col-body
 ---
+{% if page.subcategory %}
+	{% assign title = page.title %}
+	{% assign subtitle = "" %}
+{% else %}
+	{% assign title = site.data[page.language].topics[page.category].title %}
+	{% assign subtitle = site.data[page.language].topics[page.category].subtitle %}
+{% endif %}
 
 <div>
-	<h2 class="noCategory">{{ site.data[page.language].topics[page.category].title }}</h2>
-	<p class="topic_subtitle">{{ site.data[page.language].topics[page.category].subtitle }}</p>
+	<h2 class="noCategory">{{ title }}</h2>
+	{% unless subtitle == "" %}
+		<p class="topic_subtitle">{{ subtitle }}</p>
+	{% endunless %}
 	<nav role="doc-toc" id="toc" aria-label="Table of contents">
 		{{content}}
 	</nav>

@@ -18,7 +18,7 @@
 			"wcag-expl": {
 				"title": "WCAG Explainers",
 				"subtitle": "Introductions to each WCAG success criterion. Link leads to a submenu of topics.",
-				"index-path": "wcag/"
+				"subpath-root": "wcag/"
 			}
 		}
 	},
@@ -467,7 +467,7 @@
 					"dpub-aria": {
 						"title": "Digital Publishing Roles",
 						"subtitle": "Introduction to the DPUB-ARIA module for use with the ARIA <code>role</code> attribute. The page also links through to detailed descriptions for each role in the module.",
-						"subpath-root": "html/dpub-aria/"
+						"subpath-root": "dpub-aria/"
 					}
 				}
 			},
