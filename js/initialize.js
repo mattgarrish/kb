@@ -148,14 +148,6 @@ KB.prototype.createPermaLink = function(num, label, dest) {
 
 }
 
-/* call the google pretty print function for examples */
-
-KB.prototype.prettyPrint = function() {
-	if (!this.isIndex && !this.isSearch && !this.isHomePage) {
-		prettyPrint();
-	}
-}
-
 
 /* add buttons to copy example text */
 
@@ -248,6 +240,9 @@ window.onload = function () {
 		pg_title_elem.innerHTML = '<span class="onix-num">' + pg_title.substring(0, pg_title.indexOf(':') + 1) + '</span><span class="onix-def">' + pg_title.substring(pg_title.indexOf(':') + 1) + '</span>';
 	}
 
+	// pretty print the examples
+	prettyPrint();
+	
 }
 
 
