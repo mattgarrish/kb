@@ -27,7 +27,7 @@
 		"navigation": "Navigation",
 		"script": "Scripting",
 		"sync-media": "Sync Media",
-		"tts": "Text-to-Speech"
+		"text-to-speech": "Text-to-Speech"
 	},
 	
 	"footer": {

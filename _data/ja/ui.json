@@ -24,7 +24,7 @@
     "navigation": "ナビゲーション",
     "script": "スクリプト",
     "sync-media": "メディアの同期",
-    "tts": "テキスト読み上げ（TTS)"
+    "text-to-speech": "テキスト読み上げ（TTS)"
   },
   "footer": {
     "a11y": "EPUBアクセシビリティ",

@@ -1,14 +1,9 @@
 ---
-layout: default
+layout: two-col-body
 ---
 
-<div id="col-wrapper" class="two-col">
-	<div id="body" class="two-col">
-		<section class="blank">
-			<h2 class="noCategory">{{ page.title }}</h2>
-			
-			{{content}}
-		</section>
-	</div>
-	{% include categories.html %}
-</div>
+<section {% if page.root %} id="home"{% else %} class="blank"{% endif %}>
+	<h2 class="noCategory">{{ page.title }}</h2>
+	
+	{{content}}
+</section>

@@ -32,7 +32,7 @@
 					<a href="/publishing/{{path}}/reporting/#bugs">{{ site.data[page.language].ui.footer.report }}</a>
 				</li>
 				<li>
-					<a href="https://github.com/DAISY/kb/commits/main/publishing/docs/html/abbr.html">{{ site.data[page.language].ui.footer.rev }}</a>
+					<a href="https://github.com/DAISY/kb/commits/main{{ page.url }}">{{ site.data[page.language].ui.footer.rev }}</a>
 				</li>
 				<li>
 					<a href="/publishing/{{path}}/reporting/#new">{{ site.data[page.language].ui.footer.request }}</a>
@@ -56,8 +56,8 @@
 		<div class="footer-list">
 			<div>{{ site.data[page.language].ui.footer.lang }}</div>
 			<select onchange="switchLanguage(this)">
-				<option value="en" selected="true">{{ site.data[page.language].ui.footer.en }}</option>
-				<option value="ja">{{ site.data[page.language].ui.footer.ja }}</option>
+				<option value="en"{% if page.language == 'en' %} selected=""{% endif %}>{{ site.data[page.language].ui.footer.en }}</option>
+				<option value="ja"{% if page.language == 'ja' %} selected=""{% endif %}>{{ site.data[page.language].ui.footer.ja }}</option>
 			</select>
 		</div>
 	</div>

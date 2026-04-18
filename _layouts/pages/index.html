@@ -1,16 +1,11 @@
 ---
-layout: default
+layout: two-col-body
 ---
 
-<div id="col-wrapper" class="two-col">
-	<div id="body" class="two-col">
-		<div>
-			<h2 class="noCategory">{{ site.data[page.language].topics[page.category].title }}</h2>
-			<p class="topic_subtitle">{{ site.data[page.language].topics[page.category].subtitle }}</p>
-			<nav role="doc-toc" id="toc" aria-label="Table of contents">
-				{{content}}
-			</nav>
-		</div>
-	</div>
-	{% include categories.html %}
+<div>
+	<h2 class="noCategory">{{ site.data[page.language].topics[page.category].title }}</h2>
+	<p class="topic_subtitle">{{ site.data[page.language].topics[page.category].subtitle }}</p>
+	<nav role="doc-toc" id="toc" aria-label="Table of contents">
+		{{content}}
+	</nav>
 </div>

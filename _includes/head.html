@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>{{ page.title }} - {{ site.data[page.language].ui.footer.topics }}</title>
+<title>{% unless page.root %} {{ page.title }} - {% endunless %}{{ site.data[page.language].ui.kb_name.publishing }}</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ page.description }}">

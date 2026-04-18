@@ -3,21 +3,22 @@
 		"title": "Accessibility Conformance",
 		"subtitle": "The accessibility conformance topics provide information on meeting the various accessibility standards that apply to digital publications.",
 		"topics": {
-			"conf-epub": {
+			"epub": {
 				"title": "EPUB Accessibility",
 				"subtitle": "Explanation of the EPUB Accessibility specification."
 			},
-			"conf-s508": {
+			"s508": {
 				"title": "Section 508 (US)",
 				"subtitle": "Explanation of the US Section 508 requirements for publications."
 			},
-			"conf-wcag": {
+			"wcag": {
 				"title": "WCAG Overview",
 				"subtitle": "Introduction to the W3C's Web Content Accessibility Guidelines."
 			},
-			"conf-wcag-expl": {
+			"wcag-expl": {
 				"title": "WCAG Explainers",
-				"subtitle": "Introductions to each WCAG success criterion. Link leads to a submenu of topics."
+				"subtitle": "Introductions to each WCAG success criterion. Link leads to a submenu of topics.",
+				"index-path": "wcag/"
 			}
 		}
 	},
@@ -26,55 +27,55 @@
 		"title": "EPUB",
 		"subtitle": "The EPUB topics cover accessibility issues that are unique to the EPUB format.",
 		"categories": {
-			"epub-general": {
+			"general": {
 				"title": "General",
 				"topics": {
-					"epub-cmt": {
+					"cmt": {
 						"title": "Core Media Types",
 						"subtitle": "Explanation of formats that are assured to render in EPUB publications."
 					},
-					"epub-cover": {
+					"cover": {
 						"title": "Cover",
 						"subtitle": "Accessible practices for including a cover image."
 					},
-					"epub-title": {
+					"title": {
 						"title": "Publication Title",
 						"subtitle": "Providing a title for an EPUB publication."
 					},
-					"epub-order": {
+					"reading-order": {
 						"title": "Reading Order",
 						"subtitle": "Specifying the reading order of documents the spine."
 					},
-					"epub-remote": {
+					"remote-resources": {
 						"title": "Remote Resources",
 						"subtitle": "Overview of the problems hosting resources outside the EPUB container."
 					},
-					"epub-language": {
+					"language": {
 						"title": "Setting the Language",
 						"subtitle": "Language identification in the package document and in content documents."
 					},
-					"epub-dir": {
+					"dir": {
 						"title": "Text Direction",
 						"subtitle": "Specifying whether metadata text direction is left-to-right or right-to-left."
 					}
 				}
 			},
-			"epub-validation": {
+			"validation": {
 				"title": "Validation",
 				"topics": {
-					"epub-val-overview": {
+					"overview": {
 						"title": "Validation Process",
 						"subtitle": "Overview of the validation process and tools and for EPUB publications."
 					},
-					"epub-val-epubcheck": {
+					"epubcheck": {
 						"title": "Epubcheck",
 						"subtitle": "How to use epubcheck to check publications for conformance issues."
 					},
-					"epub-val-ace": {
+					"ace": {
 						"title": "Ace by DAISY",
 						"subtitle": "How to use the Ace checker to find accessibility issues."
 					},
-					"epub-val-smart": {
+					"smart": {
 						"title": "Ace SMART",
 						"subtitle": "How to use the Ace SMART tool to evaluate a publication against the EPUB Accessibility specification."
 					}
@@ -90,15 +91,15 @@
 			"nav-aids": {
 				"title": "Publication Navigation",
 				"topics": {
-					"nav-contentlist": {
+					"content-list": {
 						"title": "Content Lists",
 						"subtitle": "Describes how to add lists of tables, figures, etc."
 					},
-					"nav-landmarks": {
+					"landmarks": {
 						"title": "Landmarks",
 						"subtitle": "Describes the EPUB concept of publication landmarks."
 					},
-					"nav-toc": {
+					"toc": {
 						"title": "Table of Contents",
 						"subtitle": "Describes best practices for including tables of contents."
 					}
@@ -107,19 +108,19 @@
 			"nav-page": {
 				"title": "Page Navigation",
 				"topics": {
-					"nav-pagenav": {
+					"pagenav": {
 						"title": "Overview",
 						"subtitle": "Introduction to the components of page navigation."
 					},
-					"nav-pagebreaks": {
+					"pagebreaks": {
 						"title": "Page Break Markers",
 						"subtitle": "Describes the how to add page break markers."
 					},
-					"nav-pagelist": {
+					"pagelist": {
 						"title": "Page List",
 						"subtitle": "Describes the purpose and construction of a page list."
 					},
-					"nav-pagesrc": {
+					"pagesrc": {
 						"title": "Page Source",
 						"subtitle": "How to identify the source of pagination."
 					}
@@ -135,7 +136,7 @@
 			"meta-general": {
 				"title": "General",
 				"topics": {
-					"meta-evaluation": {
+					"evaluation": {
 						"title": "Evaluation",
 						"subtitle": "Covers the conformance and evaluation metadata required by the EPUB Accessibility specification."
 					}
@@ -144,37 +145,45 @@
 			"meta-schema": {
 				"title": "Schema.org",
 				"topics": {
-					"schema-overview": {
+					"overview": {
 						"title": "Overview",
-						"subtitle": "Introduction to the accessibility metadata properties defined in the schema.org CreativeWork type."
+						"subtitle": "Introduction to the accessibility metadata properties defined in the schema.org CreativeWork type.",
+						"subpath": "schema.org/"
 					},
-					"schema-a11yAPI": {
+					"accessibilityAPI": {
 						"title": "Accessibility APIs",
-						"subtitle": "Identifying compatibility with platform APIs using the <code>accessibilityAPI</code> property."
+						"subtitle": "Identifying compatibility with platform APIs using the <code>accessibilityAPI</code> property.",
+						"subpath": "schema.org/"
 					},
-					"schema-a11yControl": {
+					"accessibilityControl": {
 						"title": "Accessibility Controls",
-						"subtitle": "Identifying how users can control the content using the <code>accessibilityControl</code> property."
+						"subtitle": "Identifying how users can control the content using the <code>accessibilityControl</code> property.",
+						"subpath": "schema.org/"
 					},
-					"schema-a11yFeature": {
+					"accessibilityFeature": {
 						"title": "Accessibility Features",
-						"subtitle": "Expressing features of the content using the <code>accessibilityFeature</code> property."
+						"subtitle": "Expressing features of the content using the <code>accessibilityFeature</code> property.",
+						"subpath": "schema.org/"
 					},
-					"schema-a11yHazard": {
+					"accessibilityHazard": {
 						"title": "Accessibility Hazards",
-						"subtitle": "Expressing dangers for users using the <code>accessibilityHazard</code> property."
+						"subtitle": "Expressing dangers for users using the <code>accessibilityHazard</code> property.",
+						"subpath": "schema.org/"
 					},
-					"schema-a11ySummary": {
+					"accessibilitySummary": {
 						"title": "Accessibility Summary",
-						"subtitle": "Providing a summary using the <code>accessibilitySummary</code> property."
+						"subtitle": "Providing a summary using the <code>accessibilitySummary</code> property.",
+						"subpath": "schema.org/"
 					},
-					"schema-accessMode": {
+					"accessMode": {
 						"title": "Access Modes",
-						"subtitle": "Identifying the nature of the content using the <code>accessMode</code> property."
+						"subtitle": "Identifying the nature of the content using the <code>accessMode</code> property.",
+						"subpath": "schema.org/"
 					},
-					"schema-accessModeSufficient": {
+					"accessModeSufficient": {
 						"title": "Sufficient Access Modes",
-						"subtitle": "Identifying sufficient means of reading that provide access to the information using <code>accessModeSufficient</code> property."
+						"subtitle": "Identifying sufficient means of reading that provide access to the information using <code>accessModeSufficient</code> property.",
+						"subpath": "schema.org/"
 					}
 				}
 			},
@@ -183,19 +192,23 @@
 				"topics": {
 					"onix-overview": {
 						"title": "Overview",
-						"subtitle": "Overview of ONIX accessibility metadata"
+						"subtitle": "Overview of ONIX accessibility metadata",
+						"subpath-root": "onix/"
 					},
-					"onix-codelist-196": {
+					"codelist-196": {
 						"title": "Codelist 196",
-						"subtitle": "Expressing accessibility metadata using list 196"
+						"subtitle": "Expressing accessibility metadata using list 196",
+						"subpath-root": "onix/codelist-196/"
 					},
 					"onix-codelist-143": {
 						"title": "Codelist 143",
-						"subtitle": "Expressing accessibility hazard risks using list 143"
+						"subtitle": "Expressing accessibility hazard risks using list 143",
+						"subpath-root": "onix/codelist-143/"
 					},
 					"onix-codelist-81": {
 						"title": "Codelist 81",
-						"subtitle": "Expressing access mode metadata using list 81"
+						"subtitle": "Expressing access mode metadata using list 81",
+						"subpath-root": "onix/codelist-81/"
 					}
 				}
 			}
@@ -209,107 +222,107 @@
 			"html-elem-attr": {
 				"title": "Elements and Attributes",
 				"topics": {
-					"html-abbr": {
+					"abbr": {
 						"title": "Abbreviations",
 						"subtitle": "The <code>abbr</code> element"
 					},
-					"html-accesskeys": {
+					"accesskeys": {
 						"title": "Access Keys",
 						"subtitle": "The <code>accesskey</code> attribute"
 					},
-					"html-articles": {
+					"articles": {
 						"title": "Articles",
 						"subtitle": "The <code>article</code> element"
 					},
-					"html-asides": {
+					"asides": {
 						"title": "Asides",
 						"subtitle": "The <code>aside</code> element"
 					},
-					"html-audio": {
+					"audio": {
 						"title": "Audio",
 						"subtitle": "The <code>audio</code> element"
 					},
-					"html-emphasis": {
+					"emphasis": {
 						"title": "Bolding and Italics",
 						"subtitle": "The <code>b</code>, <code>em</code>, <code>i</code>, and <code>strong</code> elements"
 					},
-					"html-context": {
+					"context": {
 						"title": "Context Breaks",
 						"subtitle": "The <code>hr</code> element"
 					},
-					"html-details": {
+					"details": {
 						"title": "Details",
 						"subtitle": "The <code>details</code> element"
 					},
-					"html-figures": {
+					"figures": {
 						"title": "Figures",
 						"subtitle": "The <code>figure</code> element"
 					},
-					"html-forms": {
+					"forms": {
 						"title": "Forms",
 						"subtitle": "The <code>form</code> element"
 					},
-					"html-headings": {
+					"headings": {
 						"title": "Headings",
 						"subtitle": "The <code>h1</code> to <code>h6</code>, <code>hgroup</code>, and <code>heading</code> elements"
 					},
-					"html-ids": {
+					"ids": {
 						"title": "Identifiers",
 						"subtitle": "The <code>id</code> attribute"
 					},
-					"html-iframes": {
+					"iframes": {
 						"title": "Inline Frames",
 						"subtitle": "The <code>iframe</code> element"
 					},
-					"html-lang": {
+					"lang": {
 						"title": "Language",
 						"subtitle": "The <code>lang</code> and <code>xml:lang</code> attributes"
 					},
-					"html-links": {
+					"links": {
 						"title": "Links",
 						"subtitle": "The <code>a</code> element"
 					},
-					"html-lists": {
+					"lists": {
 						"title": "Lists",
 						"subtitle": "The <code>dl</code>, <code>ol</code>, and <code>ul</code> elements"
 					},
-					"html-main": {
+					"main": {
 						"title": "Main Content",
 						"subtitle": "The <code>main</code> element"
 					},
-					"html-mathml": {
+					"mathml": {
 						"title": "MathML",
 						"subtitle": "The <code>math</code> element"
 					},
-					"html-meta": {
+					"meta": {
 						"title": "Meta",
 						"subtitle": "The <code>meta</code> element"
 					},
-					"html-object": {
+					"object": {
 						"title": "Object",
 						"subtitle": "The <code>object</code> element"
 					},
-					"html-title": {
+					"title": {
 						"title": "Page Title",
 						"subtitle": "The <code>title</code> element"
 					},
-					"html-quote": {
+					"quotes": {
 						"title": "Quotes",
 						"subtitle": "The <code>blockquote</code> and <code>q</code> elements"
 					},
-					"html-sections": {
+					"sections": {
 						"title": "Sections",
 						"subtitle": "The <code>section</code> element"
 					},
-					"html-dir": {
+					"dir": {
 						"title": "Text Direction",
 						"subtitle": "The <code>dir</code> attribute"
 					},
-					"html-svg": {
+					"svg": {
 						"title": "SVG",
 						"subtitle": "The <code>svg</code> element"
 					},
-					"html-video": {
+					"video": {
 						"title": "Video",
 						"subtitle": "The <code>video</code> element"
 					}
@@ -388,15 +401,15 @@
 			"html-structures": {
 				"title": "Structures",
 				"topics": {
-					"html-biblio": {
+					"bibliographies": {
 						"title": "Bibliographies",
 						"subtitle": "Markup recommendations for producing accessible bibliographies."
 					},
-					"html-glossary": {
+					"glossaries": {
 						"title": "Glossaries",
 						"subtitle": "Markup recommendations for producing accessible glossaries."
 					},
-					"html-indexes": {
+					"indexes": {
 						"title": "Indexes",
 						"subtitle": "Markup recommendations for producing accessible indexes."
 					}
@@ -405,23 +418,23 @@
 			"html-patterns": {
 				"title": "Patterns",
 				"topics": {
-					"html-dropcaps": {
+					"dropcaps": {
 						"title": "Drop Caps",
 						"subtitle": "Methods for creating accessible drop caps."
 					},
-					"html-notes": {
+					"notes": {
 						"title": "Footnotes and Endnotes",
 						"subtitle": "Accessibly identifying, structuring, and linking notes and their references."
 					},
-					"html-hidden-conent": {
+					"hidden": {
 						"title": "Hidden Content",
 						"subtitle": "Techniques for hiding content both from visual rendering and from assistive technologies."
 					},
-					"html-poetry": {
+					"poetry": {
 						"title": "Poetry",
 						"subtitle": "Techniques for formatting and describing line-based content."
 					},
-					"htmk-refs": {
+					"reflinks": {
 						"title": "Links to Reference Marks",
 						"subtitle": "Practices for linking back to the references to tables, figures, notes, etc."
 					}
@@ -430,11 +443,11 @@
 			"html-concepts": {
 				"title": "Concepts",
 				"topics": {
-					"html-reading-order": {
+					"order": {
 						"title": "Logical Reading Order",
 						"subtitle": "Practices for ensuring that the primary narrative is clearly separated from secondary content."
 					},
-					"html-sep-style": {
+					"separation": {
 						"title": "Separation of Style",
 						"subtitle": "Practices for ensuring that style is not the only way that necessary information is conveyed."
 					}
@@ -443,17 +456,18 @@
 			"html-aria": {
 				"title": "ARIA",
 				"topics": {
-					"html-landmarks": {
+					"landmarks": {
 						"title": "ARIA Landmarks",
 						"subtitle": "Introduces the ARIA landmark roles for identifying key sections of publications."
 					},
-					"html-role": {
+					"roles": {
 						"title": "ARIA role Attribute",
 						"subtitle": "Describes how the ARIA <code>role</code> attribute influences how assistive technologies understand elements that carry the attribute."
 					},
-					"html-dpub": {
+					"dpub-aria": {
 						"title": "Digital Publishing Roles",
-						"subtitle": "Introduction to the DPUB-ARIA module for use with the ARIA <code>role</code> attribute. The page also links through to detailed descriptions for each role in the module."
+						"subtitle": "Introduction to the DPUB-ARIA module for use with the ARIA <code>role</code> attribute. The page also links through to detailed descriptions for each role in the module.",
+						"subpath-root": "html/dpub-aria/"
 					}
 				}
 			},
@@ -473,27 +487,27 @@
 		"title": "CSS",
 		"subtitle": "The CSS topics cover the accessible styling of content using the cascading style sheets technology.",
 		"topics": {
-			"css-color": {
+			"color": {
 				"title": "Color",
 				"subtitle": "Techniques to ensure color is not the only means by which information is conveyed."
 			},
-			"css-contrast": {
+			"contrast": {
 				"title": "Contrast",
 				"subtitle": "Techniques to ensure sufficient contrast when setting foreground and background colors."
 			},
-			"css-ref": {
+			"reference": {
 				"title": "CSS Property Reference",
 				"subtitle": "Reference to core CSS properties that have known accessibility issues."
 			},
-			"css-reflow": {
+			"reflow": {
 				"title": "Reflow",
 				"subtitle": "Discussion of the issues styling presents in meeting WCAG's reflow requirement."
 			},
-			"css-text-resize": {
+			"text-resize": {
 				"title": "Text Resizing",
 				"subtitle": "Techniques for avoiding accessibility issues when text is resized."
 			},
-			"css-text-spacing": {
+			"text-spacing": {
 				"title": "Text Spacing",
 				"subtitle": "Techniques for avoiding accessibility issues when text spacing is changed."
 			}
@@ -504,35 +518,35 @@
 		"title": "Scripted Content and Forms",
 		"subtitle": "The scripting and forms topics cover issues related to adding interactive content to digital publications.",
 		"topics": {
-			"script-autocomplete": {
+			"autocomplete": {
 				"title": "Autocomplete",
 				"subtitle": "Using the <code>autocomplete</code> attribute to help users fill in common form fields."
 			},
-			"script-controls": {
+			"controls": {
 				"title": "Custom Controls",
 				"subtitle": "Using ARIA roles, states, and properties to make custom controls accessible."
 			},
-			"script-validation": {
+			"input-validation": {
 				"title": "Input Validation",
 				"subtitle": "Techniques for ensuring that users can understand and correct input errors in forms."
 			},
-			"script-keyboard": {
+			"keyboard": {
 				"title": "Keyboard Control",
 				"subtitle": "Techniques for ensuring that keyboard users can control scripted content."
 			},
-			"script-labels": {
+			"labels": {
 				"title": "Labels",
 				"subtitle": "Techniques for ensuring that inputs and controls are accessibly labelled."
 			},
-			"script-pe": {
+			"pe": {
 				"title": "Progressive Enhancement",
 				"subtitle": "Review of progressively enhancing content so that it remains accessible when scripting is not available."
 			},
-			"script-tab-order": {
+			"tab-order": {
 				"title": "Tab Order",
 				"subtitle": "Techniques for ensuring the keyboard tab order is accessible."
 			},
-			"script-timers": {
+			"timers": {
 				"title": "Timers",
 				"subtitle": "Techniques for ensuring timed content is accessible."
 			}
@@ -546,24 +560,24 @@
 			"fxl-general": {
 				"title": "General",
 				"topics": {
-					"fxl-overview": {
+					"overview": {
 						"aria-label": "Fixed Layouts Overview",
 						"title": "Overview",
 						"subtitle": "General introduction to creating fixed layouts in EPUB."
 					},
-					"fxl-html": {
+					"html": {
 						"title": "HTML Layouts",
 						"subtitle": "Overview of creating accessible fixed layouts in HTML."
 					},
-					"fxl-img-spine": {
+					"img-spine": {
 						"title": "Images in Spine",
 						"subtitle": "Overview of accessibility issues putting images directly in the EPUB spine."
 					},
-					"fxl-svg": {
+					"svg": {
 						"title": "SVG Layouts",
 						"subtitle": "Overview of creating accessible fixed layouts in SVG."
 					},
-					"fxl-wcag": {
+					"wcag": {
 						"title": "WCAG Conformance",
 						"subtitle": "Overview of the difficulties making fixed layouts conform to WCAG accessibility requirements."
 					}
@@ -572,16 +586,16 @@
 			"fxl-tech": {
 				"title": "Techniques",
 				"topics": {
-					"fxl-img": {
+					"img": {
 						"aria-label": "Fixed Layout Images",
 						"title": "Images",
 						"subtitle": "Explores the issues making image-based fixed layouts accessible."
 					},
-					"fxl-spreads": {
+					"spreads": {
 						"title": "Multipage Spreads",
 						"subtitle": "Explores the issues with content that is split across fixed-layout pages."
 					},
-					"fxl-orient": {
+					"orientation": {
 						"title": "Orientation",
 						"subtitle": "Explores the issues with constraining the orientation in which fixed layouts render."
 					}
@@ -597,7 +611,7 @@
 			"sync-implementation": {
 				"title": "Implementations",
 				"topics": {
-					"sync-overview": {
+					"overlays": {
 						"title": "EPUB 3 Media Overlays",
 						"subtitle": "Overview of EPUB 3's media overlays feature for synchronizing text with prerecorded audio playback."
 					}
@@ -606,16 +620,16 @@
 			"sync-techniques": {
 				"title": "Techniques",
 				"topics": {
-					"sync-highlight": {
+					"highlight": {
 						"title": "Highlighting",
 						"subtitle": "Considerations for accessible text highlighting."
 					},
-					"sync-lists": {
+					"lists": {
 						"aria-label": "Synchronized Media Lists",
 						"title": "Lists",
 						"subtitle": "Structuring lists for synchronized playback."
 					},
-					"sync-tables": {
+					"tables": {
 						"aria-label": "Synchronized Media Tables",
 						"title": "Tables",
 						"subtitle": "Structuring tables for synchronized playback."
@@ -625,23 +639,23 @@
 		}
 	},
 	
-	"tts": {
+	"text-to-speech": {
 		"title": "Text to Speech",
 		"subtitle": "The text-to-speech (TTS) topics cover technologies that aid in producing high-quality TTS playback.",
 		"topics": {
-			"tts-overview": {
+			"overview": {
 				"title": "Overview",
 				"subtitle": "Overview of the issues with text-to-speech playback and the technologies available to help."
 			},
-			"tts-speech": {
+			"speech": {
 				"title": "CSS3 Speech",
 				"subtitle": "Review of the Speech module properties for controlling TTS playback through style sheets."
 			},
-			"tts-pls": {
+			"pls": {
 				"title": "PLS Lexicons",
 				"subtitle": "Review of using pronunciation lexicons to create dictionaries of terms."
 			},
-			"tts-ssml": {
+			"ssml": {
 				"title": "SSML",
 				"subtitle": "Review of EPUB's attribute implementation of the Synthetic Speech Markup Language."
 			}

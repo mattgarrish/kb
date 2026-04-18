@@ -14,16 +14,18 @@ layout: default
 		{% unless page.allTopics %}
 		
 		<div id="page-title">
-			{% unless page.hideCategory %}
+			{% if page.category %}
 				<div class="category">
 					{{ site.data[page.language].ui.UI.cat }}
 					<a href="{{ path }}index.html" class="breadcrumb">{{ site.data[page.language].topics[page.category].title }}</a>
 					{% if page.subcategory %}
 					- <a href="index.html" class="breadcrumb">{{ site.data[page.language].topics[page.subcategory].title }}</a>
 					{% endif %}
+					<h2>{{page.title}}</h2>
 				</div>
-			{% endunless %}
-			<h2>{{page.title}}</h2>
+			{% else %}
+				<h2 class="noCategory">{{page.title}}</h2>
+			{% endif %}
 		</div>
 		{% endunless %}
 		

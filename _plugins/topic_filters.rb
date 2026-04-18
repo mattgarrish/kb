@@ -1,5 +1,26 @@
 module Jekyll
   module TopicFilter
+    def format_topic_li(topic, path)
+      
+      if topic[1]['subpath']
+      	url = path + topic[1]['subpath'] + topic[0] + '.html'
+      
+      elsif topic[1]['subpath-root']
+      	url = path + topic[1]['subpath-root'] + 'index.html'
+      
+      else
+      	url = path + topic[0] + '.html'
+      end
+      
+      <<LI
+		<li>
+			<a href="#{url}">#{topic[1]['title']}</a>
+			<br>
+			<span class="topic_subtitle">#{topic[1]['subtitle']}</span>
+		</li>
+LI
+    end
+    
     def appliesTo_section(input, site, page)
       lang = page['language'];
       sec = <<SEC

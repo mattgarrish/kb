@@ -1,4 +1,6 @@
-{% if page.index or page.allTopics %}
+{% if page.index %}
+	{% assign classes = "index category" %}
+{% elsif page.allTopics %}
 	{% assign classes = "index" %}
 {% elsif page.search %}
 	{% assign classes = "search" %}
